@@ -3,10 +3,14 @@ import './App.css'
 import Header from './components/Header/Header'
 import Recipes from './components/Recipes/Recipes'
 import Sidebar from './components/Sidebar/Sidebar'
+// import toast
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
  
   const [wantToCook, setWantToCook] = useState([]);
+  
 
   const handleAddToCook = recipe =>{
     const isExist = wantToCook.find((item) =>item.recipe_id == recipe.recipe_id);
@@ -16,18 +20,15 @@ function App() {
       setWantToCook(newWantToCook);
     }
     else{
-      
-      <div class="toast toast-end toast-middle">
-        <div class="alert alert-info">
-          <span>Already added to cook list</span>
-        </div>
-        <div class="alert alert-success">
-          <span>Message sent successfully.</span>
-        </div>
-      </div>
+      toast ('!! Already added to cook list');
     }
-  
   }
+
+  const handleCurrentCooking = (id) =>{
+    const remaining = wantToCook.filter(item => item.recipe_id != id)
+    setWantToCook(remaining)
+  }
+
 
   return (
     <div className='container mx-auto'>
@@ -38,10 +39,13 @@ function App() {
       </div>
       <div className='flex justify-between gap-6'>
         <Recipes handleAddToCook={handleAddToCook}></Recipes>
-        <Sidebar wantToCook={wantToCook}></Sidebar>
+        <Sidebar 
+        wantToCook={wantToCook}
+        handleCurrentCooking={handleCurrentCooking}
+        ></Sidebar>
       </div>
       
-      
+      <ToastContainer />
     </div>
   )
 }

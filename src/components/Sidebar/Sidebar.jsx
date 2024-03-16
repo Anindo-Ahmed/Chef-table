@@ -1,4 +1,4 @@
-const Sidebar = ({wantToCook}) => {
+const Sidebar = ({wantToCook, handleCurrentCooking}) => {
     
     return (
         <div className="lg:w-1/3 mt-12 border rounded-3xl p-5">
@@ -32,14 +32,14 @@ const Sidebar = ({wantToCook}) => {
                                         </tr>
                                     </thead>
                                 </table>
-                                <button className="btn bg-[#0BE58A] border-0 px-3 text-sm text-black rounded-full">Preparing</button>
+                                <button onClick={() =>handleCurrentCooking(cook.recipe_id)} className="btn bg-[#0BE58A] border-0 px-3 text-sm text-black rounded-full">Preparing</button>
                             </div>
                         </div>
                     ))
                 }
             </div> 
             <div className="mb-4">
-            <h2 className="text-center text-2xl font-semibold">Currently cooking:</h2>
+            <h2 className="text-center text-2xl font-semibold">Currently cooking: </h2>
             <hr className="my-5 w-2/3 mx-auto"/> 
             <div>
                 <div className="overflow-x-auto fira-font">
@@ -53,25 +53,36 @@ const Sidebar = ({wantToCook}) => {
                             <th>Calories</th>
                         </tr>
                         </thead>
-                        <tbody>
-                        {/* row 1 */}
+                        {/* <tbody>
                         <tr>
                             <th>1</th>
-                            <td>Cy Ganderton</td>
-                            <td>30 minutes</td>
-                            <td>400 calories</td>
-                        </tr>
-                        {/* row 2 */}
-                        <tr>
-                            <th>2</th>
-                            <td>Hart Hagert</td>
-                            <td>30 minutes</td>
-                            <td>400 calories</td>
+                            <td>{cooking.recipe_name}</td>
+                            <td><span>{cooking.preparing_time}</span> minutes</td>
+                            <td><span>{cooking.calories}</span> calories</td>
                         </tr>
                         
-                        </tbody>
+                        </tbody> */}
                     </table>
                 </div>
+                {
+                    wantToCook.map((cook, idx) => (
+                        <div className="fira-font font-medium">
+                            <div className="flex justify-between"> 
+                                <table className="table">
+                                    <thead>
+                                        <tr>
+                                            <th>{idx+1}</th>
+                                            <td className="text-wrap">{cook.recipe_name}</td>
+                                            <td><span>{cook.preparing_time}</span> <br />minutes</td>
+                                            <td><span>{cook.calories}</span> <br />calories</td>
+                                        </tr>
+                                    </thead>
+                                </table>
+                                
+                            </div>
+                        </div>
+                    ))
+                }
             </div>
             </div>
             <div className="flex justify-end gap-3">
