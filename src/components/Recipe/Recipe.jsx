@@ -1,4 +1,4 @@
-const Recipe = ({recipe}) => {
+const Recipe = ({recipe, handleAddToCook}) => {
     const {recipe_id, recipe_name, short_description, ingredients, preparing_time, calories, recipe_image} = recipe
     return (
         <div className="border mt-12 gap-3 rounded-3xl">
@@ -25,7 +25,7 @@ const Recipe = ({recipe}) => {
                             <p><span>{calories}</span> calories</p>
                         </div> 
                     </div>
-                    <button className="btn bg-[#0BE58A] border-0 text-black rounded-full">Want to Cook</button>
+                    <button onClick={()=>handleAddToCook(recipe)} className="btn bg-[#0BE58A] border-0 text-black rounded-full">Want to Cook</button>
                 </div>
                 
             </div>
