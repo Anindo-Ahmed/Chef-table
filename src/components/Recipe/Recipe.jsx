@@ -9,7 +9,7 @@ const Recipe = ({recipe}) => {
                     <p className="my-4 fira-font font-normal text-[#878787]">{short_description}</p>
                     <hr className="my-5 w-2/3"/>
                     <h5 className="text-lg font-medium mb-4">Ingredients: {ingredients.length}</h5>
-                    <ul >
+                    <ul className="fira-font text-lg font-normal text-[#878787]">
                         {
                             ingredients.slice(0, 4).map((ingredient, idx) => <li key={idx} className="list-disc">{ingredient}</li>)
                         }
