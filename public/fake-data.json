@@ -1,0 +1,75 @@
+[
+    {
+      "recipe_id": "1",
+      "recipe_name": "Savory Mushroom Risotto",
+      "short_description": "A delightful blend of creamy risotto and earthy mushrooms.",
+      "ingredients": ["300g Arborio rice", "200g Mushrooms", "1L Chicken or vegetable broth", "100g Parmesan cheese", "50g Butter", "1 Onion", "2 cloves Garlic", "150ml White wine", "1 tsp Thyme", "Salt", "Pepper"],
+      "preparing_time": "45",
+      "calories": "450",
+      "recipe_image": "https://i.ibb.co/gWWKDcL/id-1.jpg"
+    },
+    {
+      "recipe_id": "2",
+      "recipe_name": "Zesty Lemon Chicken",
+      "short_description": "Juicy chicken breasts infused with zesty lemon flavors.",
+      "ingredients": ["4 Chicken breasts (550g)", "120ml Lemon juice", "2 cloves Garlic", "2 tbsp Olive oil", "1 tsp Thyme", "Salt", "Pepper"],
+      "preparing_time": "30",
+      "calories": "380",
+      "recipe_image": "https://i.ibb.co/BTgfTZ7/id-2.jpg"
+    },
+    {
+      "recipe_id": "3",
+      "recipe_name": "Spicy Black Bean Tacos",
+      "short_description": "A fiery twist on traditional tacos with flavorful black beans.",
+      "ingredients": ["400g Black beans", "8 Tortillas", "1 Avocado", "1 Lime", "50g Cilantro", "2 Tomatoes", "1 Onion", "1 Jalapeno", "1 tsp Cumin", "1 tsp Chili powder", "Salt", "Pepper"],
+      "preparing_time": "25",
+      "calories": "320",
+      "recipe_image": "https://i.ibb.co/g4gxrJw/id-3.jpg"
+    },
+    {
+      "recipe_id": "4",
+      "recipe_name": "Creamy Tomato Basil Soup",
+      "short_description": "A comforting bowl of creamy tomato soup with aromatic basil.",
+      "ingredients": ["6 Tomatoes", "1 Onion", "2 cloves Garlic", "1L Vegetable broth", "200ml Heavy cream", "50g Basil", "50g Butter", "Salt", "Pepper"],
+      "preparing_time": "40",
+      "calories": "280",
+      "recipe_image": " https://i.ibb.co/dDhhBR8/id-4.jpg"
+    },
+    {
+      "recipe_id": "5",
+      "recipe_name": "Honey Glazed Salmon",
+      "short_description": "Tender salmon fillets glazed with honey for a touch of sweetness.",
+      "ingredients": ["4 Salmon fillets (600g)", "80ml Honey", "60ml Soy sauce", "2 cloves Garlic", "1 tsp Ginger", "1 Lemon", "Salt", "Pepper"],
+      "preparing_time": "20",
+      "calories": "380",
+      "recipe_image": "https://i.ibb.co/6P1j6bV/id-5.jpg"
+    },
+    {
+      "recipe_id": "6",
+      "recipe_name": "Mediterranean Quinoa Salad",
+      "short_description": "A refreshing salad with quinoa, cucumbers, tomatoes, and olives.",
+      "ingredients": ["200g Quinoa", "1 Cucumber", "2 Tomatoes", "100g Olives", "1 Red onion", "100g Feta cheese", "1 Lemon", "60ml Olive oil", "Salt", "Pepper"],
+      "preparing_time": "25",
+      "calories": "320",
+      "recipe_image": "https://i.ibb.co/RcLRBsY/id-6.jpg"
+    },
+    {
+      "recipe_id": "7",
+      "recipe_name": "BBQ Pulled Jackfruit Sandwiches",
+      "short_description": "A vegan take on classic BBQ pulled pork sandwiches using jackfruit.",
+      "ingredients": ["2 cans Jackfruit (800g)", "240ml BBQ sauce", "1 Onion", "2 cloves Garlic", "Coleslaw", "Buns", "Salt", "Pepper"],
+      "preparing_time": "35",
+      "calories": "290",
+      "recipe_image": "https://i.ibb.co/vz9DD4t/id-7.jpg"
+    },
+    {
+      "recipe_id": "8",
+      "recipe_name": "Lemon Garlic Shrimp Pasta",
+      "short_description": "Delicious shrimp pasta infused with zesty lemon and garlic.",
+      "ingredients": ["400g Pasta", "300g Shrimp", "120ml Olive oil", "4 cloves Garlic", "2 Lemons", "50g Parsley", "Salt", "Pepper", "Parmesan cheese for garnish"],
+      "preparing_time": "35",
+      "calories": "420",
+      "recipe_image": "https://i.ibb.co/NLGqfsY/id-8.jpg"
+    }
+  ]
+  

@@ -1,8 +1,21 @@
+import { useEffect, useState } from "react";
+import Recipe from "../Recipe/Recipe";
+
 const Recipes = () => {
+
+    const [recipes, setRecipes] = useState([]);
+
+    useEffect(() =>{
+        fetch('fake-data.json')
+        .then(res => res.json())
+        .then(data => setRecipes(data))
+    },[])
     return (
-        <div className="mt-24 text-center">
-            <h2 className="text-4xl mb-6">Our Recipes</h2>
-            <p className="max-w-[800px] mx-auto">Want to start your day wih a taste of food? Learn how to cook breakfast, lunch or dinner! Discover the all required recipes with taste and benifits! </p>
+        <div className="lg:w-2/3 grid grid-cols-2 gap-6">
+
+            {
+                recipes.map(recipe => <Recipe recipe={recipe}></Recipe>)
+            }
         </div>
     );
 };

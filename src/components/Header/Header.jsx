@@ -2,8 +2,8 @@ import { IoMdSearch } from "react-icons/io";
 
 const Header = () => {
     return (
-        <div className="container mx-auto">
-            <div className="navbar bg-base-100 flex justify-around my-5 lg:my-12">
+        <div className="">
+            <div className="navbar bg-base-100 flex justify-between my-5 lg:my-12">
                 <div className=" ">
                     <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
