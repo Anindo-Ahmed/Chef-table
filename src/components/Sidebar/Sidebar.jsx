@@ -1,4 +1,4 @@
-const Sidebar = ({wantToCook, handleCurrentCooking, cooking ,handleCooking}) => {
+const Sidebar = ({wantToCook, handleCurrentCooking, cooking ,handleCooking, times, calories}) => {
     
     return (
         <div className="lg:w-1/3 mt-12 border rounded-3xl p-5">
@@ -71,14 +71,14 @@ const Sidebar = ({wantToCook, handleCurrentCooking, cooking ,handleCooking}) => 
                                         </thead>
                                     </table> 
                                 </div>
-                            </div>
+                            </div> 
                         ))
                     }
                 </div>
             </div>
             <div className="flex justify-end gap-3">
-                <p>Total Times = </p>
-                <p>Total Calories = </p>
+                <p>Total Times = {times}</p>
+                <p>Total Calories = {calories}</p>
             </div>  
         </div>
     );

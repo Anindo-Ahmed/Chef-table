@@ -11,7 +11,9 @@ function App() {
  
   const [wantToCook, setWantToCook] = useState([]);
   const [cooking, setCooking] = useState([]);
-  
+  const [times, setTime] = useState(0);
+  const [calories, setCalories] = useState(0);
+
 
   const handleAddToCook = recipe =>{
     const isExist = wantToCook.find((item) =>item.recipe_id == recipe.recipe_id);
@@ -33,12 +35,20 @@ function App() {
   const handleCooking = recipe =>{
     const isExist = cooking.find((recp) =>recp.recipe_id == recipe.recipe_id);
     if(!isExist){
-      const newCooking = [...cooking, recipe]
+      const newCooking = [...cooking, recipe];
       setCooking(newCooking);
     }
     else{
       toast ('!! Cooking Running');
     }
+
+    // total time
+    const newTime = (times + parseInt(recipe.preparing_time));
+    setTime(newTime);
+
+    // total calories
+    const newCalories = (calories + parseInt(recipe.calories));
+    setCalories(newCalories)
   }
 
 
@@ -56,7 +66,9 @@ function App() {
         wantToCook={wantToCook}
         handleCurrentCooking={handleCurrentCooking}
         handleCooking={handleCooking}
-        cooking={cooking}></Sidebar>
+        cooking={cooking}
+        times={times}
+        calories={calories}></Sidebar>
       </div>
       
       <ToastContainer />

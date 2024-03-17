@@ -16,10 +16,10 @@ const Header = () => {
                         <li><a>Search</a></li>
                     </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">CookFood</a>
+                    <a className="btn btn-ghost text-3xl font-bold">Cook<span className="text-[#0BE58A]">Food</span></a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
+                    <ul className="menu menu-horizontal px-1 text-base font-normal gap-12">
                         <li><a>Home</a></li>
                         <li><a>Recipes</a></li>
                         <li><a>About</a></li>
@@ -30,7 +30,7 @@ const Header = () => {
                 <div className="gap-2">
                     <div className="flex items-center">
                     <IoMdSearch className="text-2xl hidden lg:block"/>
-                    <input type="text" placeholder="Search" className="input input-bordered rounded-full w-20 lg:w-auto bg-[url('http://www.w3.org/2000/svg')]"/> 
+                    <input type="text" placeholder="Search" className="input input-bordered rounded-full w-20 lg:w-auto bg-[#150B2BB3] text-white"/> 
                     </div>
                     <div className="dropdown dropdown-end">
                         <div tabindex="0" role="button" className="btn btn-ghost btn-circle avatar">
