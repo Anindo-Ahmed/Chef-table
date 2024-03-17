@@ -10,6 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 function App() {
  
   const [wantToCook, setWantToCook] = useState([]);
+  const [cooking, setCooking] = useState([]);
   
 
   const handleAddToCook = recipe =>{
@@ -25,9 +26,21 @@ function App() {
   }
 
   const handleCurrentCooking = (id) =>{
-    const remaining = wantToCook.filter(item => item.recipe_id != id)
+    const remaining = wantToCook.filter(item => item.recipe_id != id);
     setWantToCook(remaining)
   }
+
+  const handleCooking = recipe =>{
+    const isExist = cooking.find((recp) =>recp.recipe_id == recipe.recipe_id);
+    if(!isExist){
+      const newCooking = [...cooking, recipe]
+      setCooking(newCooking);
+    }
+    else{
+      toast ('!! Cooking Running');
+    }
+  }
+
 
 
   return (
@@ -35,14 +48,15 @@ function App() {
       <Header></Header>
       <div className="mt-24 text-center">
             <h2 className="text-4xl mb-6">Our Recipes</h2>
-            <p className="max-w-[800px] mx-auto">Want to start your day wih a taste of food? Learn how to cook breakfast, lunch or dinner! Discover the all required recipes with taste and benifits! </p>
+            <p className="max-w-[800px] mx-auto">Want to start your day wih a taste of food? Learn how to cook breakfast, lunch or dinner! Discover the all required recipes with taste and benefits! </p>
       </div>
       <div className='flex justify-between gap-6'>
         <Recipes handleAddToCook={handleAddToCook}></Recipes>
         <Sidebar 
         wantToCook={wantToCook}
         handleCurrentCooking={handleCurrentCooking}
-        ></Sidebar>
+        handleCooking={handleCooking}
+        cooking={cooking}></Sidebar>
       </div>
       
       <ToastContainer />
