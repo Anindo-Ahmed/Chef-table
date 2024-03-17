@@ -1,3 +1,6 @@
+import { IoMdStopwatch } from "react-icons/io";
+import { SlFire } from "react-icons/sl";
+
 const Recipe = ({recipe, handleAddToCook}) => {
     const {recipe_id, recipe_name, short_description, ingredients, preparing_time, calories, recipe_image} = recipe
     return (
@@ -17,11 +20,11 @@ const Recipe = ({recipe, handleAddToCook}) => {
                     <hr className="my-5 w-2/3"/>
                     <div className="flex gap-4 mb-6">
                         <div className="flex justify-between gap-2">
-                        <img src="../../../images/watch.svg" alt="" className="w-6 h-6"/>
+                            <div><IoMdStopwatch className="w-6 h-6"/></div>
                             <p><span>{preparing_time}</span> minutes</p>
                         </div>
                         <div className="flex justify-between gap-2">
-                            <img src="../../../images/calories.svg" alt="" className="w-6 h-6"/>
+                            <div><SlFire className="w-6 h-6"/></div>
                             <p><span>{calories}</span> calories</p>
                         </div> 
                     </div>
