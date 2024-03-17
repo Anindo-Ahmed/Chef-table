@@ -11,7 +11,7 @@ const Recipes = ({handleAddToCook}) => {
         .then(data => setRecipes(data))
     },[])
     return (
-        <div className="lg:w-2/3 grid grid-cols-2 gap-6">
+        <div className="lg:w-2/3 grid grid-cols-1 lg:grid-cols-2 gap-6">
 
             {
                 recipes.map(recipe => <Recipe 

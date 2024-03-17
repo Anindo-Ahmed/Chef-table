@@ -9,11 +9,11 @@ const Recipe = ({recipe, handleAddToCook}) => {
                     <p className="my-4 fira-font font-normal text-[#878787]">{short_description}</p>
                     <hr className="my-5 w-2/3"/>
                     <h5 className="text-lg font-medium mb-4">Ingredients: {ingredients.length}</h5>
-                    <ul className="fira-font text-lg font-normal text-[#878787]">
+                    <div className="fira-font text-lg font-normal text-[#878787]">
                         {
                             ingredients.slice(0, 4).map((ingredient, idx) => <li key={idx} className="list-disc">{ingredient}</li>)
                         }
-                    </ul>
+                    </div>
                     <hr className="my-5 w-2/3"/>
                     <div className="flex gap-4 mb-6">
                         <div className="flex justify-between gap-2">

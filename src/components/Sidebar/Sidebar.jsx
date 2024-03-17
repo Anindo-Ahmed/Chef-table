@@ -1,11 +1,11 @@
 const Sidebar = ({wantToCook, handleCurrentCooking, cooking ,handleCooking, times, calories}) => {
     
     return (
-        <div className="lg:w-1/3 mt-12 border rounded-3xl p-5">
+        <div className="lg:w-1/3 mt-12 border rounded-3xl p-2 lg:p-5">
             <div className="mb-8">
                 <h2 className="text-center text-2xl font-semibold">Want to cook: {wantToCook.length}</h2>
                 <hr className="my-5 w-2/3 mx-auto"/>
-                <div className="fira-font font-medium">
+                <div className="overflow-auto fira-font font-medium">
                         <table className="table table-zebra">
                             <thead>
                             <tr>
@@ -21,7 +21,7 @@ const Sidebar = ({wantToCook, handleCurrentCooking, cooking ,handleCooking, time
                 {
                     wantToCook.map((cook, idx) => (
                         <div className="fira-font font-medium">
-                            <div className="flex justify-between"> 
+                            <div className="overflow-auto flex justify-between"> 
                                 <table className="table">
                                     <thead>
                                         <tr>

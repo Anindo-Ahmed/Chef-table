@@ -60,7 +60,7 @@ function App() {
             <h2 className="text-4xl mb-6">Our Recipes</h2>
             <p className="max-w-[800px] mx-auto">Want to start your day wih a taste of food? Learn how to cook breakfast, lunch or dinner! Discover the all required recipes with taste and benefits! </p>
       </div>
-      <div className='flex justify-between gap-6'>
+      <div className='flex flex-col lg:flex-row justify-between gap-6'>
         <Recipes handleAddToCook={handleAddToCook}></Recipes>
         <Sidebar 
         wantToCook={wantToCook}
